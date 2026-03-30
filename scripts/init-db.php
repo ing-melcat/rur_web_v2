@@ -8,15 +8,15 @@ function cli_log(string $message): void
     fwrite(STDOUT, $message . PHP_EOL);
 }
 
-$sqlPath = dirname(__DIR__) . '/database/rur_store.sql';
-if (!is_file($sqlPath)) {
-    fwrite(STDERR, "No se encontró el archivo SQL: {$sqlPath}" . PHP_EOL);
-    exit(1);
-}
-
 $shouldRun = filter_var((string) env('AUTO_DB_SETUP', 'true'), FILTER_VALIDATE_BOOL);
 if (!$shouldRun) {
     cli_log('AUTO_DB_SETUP=false, se omite la inicialización de la base de datos.');
+    exit(0);
+}
+
+$sqlPath = (string) env('DB_SCHEMA_PATH', dirname(__DIR__) . '/database/rur_store.sql');
+if (!is_file($sqlPath)) {
+    cli_log("No se encontró el archivo SQL: {$sqlPath}. Se omite la inicialización automática.");
     exit(0);
 }
 
