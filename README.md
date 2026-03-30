@@ -1,56 +1,68 @@
-# RUR Web + Store (Railway Ready)
+# Research Unit of Robotics Web Page + Store + Conekta
 
-Proyecto PHP listo para correr en Railway con:
-- sitio institucional
-- login / registro
-- productos
-- carrito
-- compras recientes
-- ticket / facturas base
-- checkout con Conekta
-- webhook de Conekta
+Este proyecto quedó extendido con una zona privada de tienda en PHP/MySQL para XAMPP o hosting PHP tradicional.
 
-## Railway
+## Lo que ya trae
 
-### Variables mínimas del servicio web
-Pega esto en **Variables -> Raw Editor** del servicio web:
+- Login y registro.
+- Productos protegidos por sesión.
+- API de carrito.
+- Header con badge y mini-carrito.
+- Compras recientes.
+- Ticket imprimible.
+- Solicitud de factura.
+- Checkout hospedado de Conekta.
+- Webhook de Conekta.
+- Configuración centralizada por `.env`.
 
-```env
-APP_ENV=production
-APP_TIMEZONE=America/Monterrey
-APP_URL=https://rurweb-production.up.railway.app
-APP_BASE_PATH=
+## Base de datos
 
-DB_HOST=${{MySQL.MYSQLHOST}}
-DB_PORT=${{MySQL.MYSQLPORT}}
-DB_NAME=railway
-DB_USER=${{MySQL.MYSQLUSER}}
-DB_PASS=${{MySQL.MYSQLPASSWORD}}
+Importa este archivo en MySQL:
 
-CONEKTA_API_BASE=https://api.conekta.io
-CONEKTA_PUBLIC_KEY=
-CONEKTA_PRIVATE_KEY=
-CONEKTA_ALLOWED_PAYMENT_METHODS=card,cash,bank_transfer
-CONEKTA_MONTHLY_INSTALLMENTS_ENABLED=false
-CONEKTA_VERIFY_WEBHOOK_DIGEST=false
-CONEKTA_WEBHOOK_PUBLIC_KEY_PEM=
+- `database/rur_store.sql`
 
-AUTO_DB_SETUP=false
-HEALTHCHECK_DB=false
-```
+Credenciales demo sembradas:
 
-### Notas importantes
-- No subas `.env` a GitHub.
-- Railway usa las variables del panel; el `.env` es solo para local.
-- Si ya importaste la base manualmente en Railway, deja `AUTO_DB_SETUP=false`.
-- El webhook de Conekta debe apuntar a:
-  `https://rurweb-production.up.railway.app/api/webhooks/conekta.php`
+- Admin: `[email protected]` / `admin123`
+- Cliente: `[email protected]` / `cliente123`
 
-## Local
-1. Copia `.env.example` a `.env`
-2. Ajusta credenciales locales
-3. Importa `database/rur_store.sql`
-4. Levanta PHP local
+## Variables `.env`
 
-## MySQL Railway
-La base usada por la app debe ser `railway`.
+Edita:
+
+- `APP_URL`
+- `APP_BASE_PATH`
+- `DB_*`
+- `CONEKTA_PRIVATE_KEY`
+- `CONEKTA_PUBLIC_KEY`
+
+## Configuración mínima de Conekta
+
+1. Entra a tu panel de Conekta.
+2. Copia tu **Private Key** y pégala en `CONEKTA_PRIVATE_KEY`.
+3. Si vas a usar webhook con verificación, crea tu **webhook key** y pega la `public_key` en `CONEKTA_WEBHOOK_PUBLIC_KEY_PEM`.
+4. Configura un webhook hacia:
+   - `APP_URL/api/webhooks/conekta.php`
+5. Eventos recomendados:
+   - `order.paid`
+   - `order.pending_payment`
+   - `order.declined`
+   - `order.expired`
+   - `order.canceled`
+   - `order.voided`
+
+## Importante sobre facturas
+
+En esta entrega la parte de **ticket** queda funcional y la parte de **facturas** registra la solicitud fiscal dentro del sistema.
+No genera CFDI timbrado automático porque eso requiere otra integración fiscal aparte.
+
+## Flujo
+
+1. El usuario inicia sesión.
+2. Agrega productos al carrito.
+3. Se crea una orden local pendiente.
+4. Se crea una orden hospedada en Conekta.
+5. El usuario paga en Checkout Conekta.
+6. El sistema confirma por retorno o webhook.
+7. Se descuenta stock cuando la orden queda pagada.
+8. La compra aparece en compras recientes y se puede abrir el ticket.

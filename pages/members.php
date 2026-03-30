@@ -1,17 +1,16 @@
-<?php require_once __DIR__ . '/../includes/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research Unit of Robotics</title>
-  <link rel="icon" type="image/png" href="<?= e(base_url('resources/RUR_logo_white.png')) ?>">
+  <link rel="icon" type="image/png" href="../resources/RUR_logo_white.png">
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
-    <link href="<?= e(base_url('styles/bootstrap.min.css')) ?>" rel="stylesheet">
-  <link href="<?= e(base_url('styles/style.css')) ?>" rel="stylesheet">
+  <link href="/style/product.css" rel="stylesheet">
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
 
   <style>
 .fixed-img {
@@ -155,9 +154,9 @@ button.project-info a:hover {
 </style>
 </head>
 
-<body class="store-page">
+<body class="p-5">
     <!--NavBar section -->
-    <?php include __DIR__ . '/components/nav-bar.php'; ?>
+    <?php include 'components/nav-bar.php'; ?>
     <!--NavBar section -->
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ecbf03;">
@@ -214,7 +213,7 @@ button.project-info a:hover {
 
     <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/founders/sergio.png');
+    $img = "../resources/founders/sergio.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -236,7 +235,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Guillermo Rios";
-        $img = base_url('resources/founders/guillermo.png');
+        $img = "../resources/founders/guillermo.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -249,7 +248,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Carlos Rios";
-        $img = base_url('resources/founders/carlos.jpg');
+        $img = "../resources/founders/carlos.jpg";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -262,7 +261,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Jazmin";
-        $img = base_url('resources/founders/jazmin.jpg');
+        $img = "../resources/founders/jazmin.jpg";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -286,7 +285,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Mariana Alondra";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -299,7 +298,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Valeria Carmona";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -312,7 +311,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Frida Olague";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -325,7 +324,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Guillermo Rios";
-        $img = base_url('resources/founders/guillermo.png');
+        $img = "../resources/founders/guillermo.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -338,7 +337,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Carlos Rios";
-        $img = base_url('resources/founders/carlos.jpg');
+        $img = "../resources/founders/carlos.jpg";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -366,7 +365,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Jonathan Fraga";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -387,7 +386,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -408,7 +407,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -429,7 +428,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Karolina";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -450,7 +449,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Joel";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -471,7 +470,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -492,7 +491,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -513,7 +512,7 @@ button.project-info a:hover {
 
    <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -549,7 +548,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -584,7 +583,7 @@ button.project-info a:hover {
 
     <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -605,7 +604,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -626,7 +625,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -647,7 +646,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Sergio Cruz";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -683,7 +682,7 @@ button.project-info a:hover {
 
   <?php
         $name = "Jazmin";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -703,7 +702,7 @@ button.project-info a:hover {
 
    <?php
         $name = "Jazmin";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -732,7 +731,7 @@ button.project-info a:hover {
 
     <?php
         $name = "Jazmin";
-        $img = base_url('resources/unknown.png');
+        $img = "../resources/unknown.png";
         $description = "Some quick example text...";
         $link = "#";
         $badges = [
@@ -760,7 +759,7 @@ button.project-info a:hover {
 
     <?php
     $name = "Carlos Omar Najera Arredondo";
-    $img = base_url('resources/unknown.png');
+    $img = "../resources/unknown.png";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -781,7 +780,7 @@ button.project-info a:hover {
 
   <?php
     $name = "Carlos Manuel Rios Ruiz";
-    $img = base_url('resources/founders/carlos.jpg');
+    $img = "../resources/founders/carlos.jpg";
     $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris";
@@ -805,9 +804,9 @@ button.project-info a:hover {
 <!-- WEB PAGE cards section -->
 
   <!-- Last modified-->
-  <?php include __DIR__ . '/components/last_modified.php'; ?>
+  <?php include '../pages/components/last_modified.php'; ?>
   <!-- FOOTER -->
-  <?php include __DIR__ . '/components/footer.php'; ?>
+  <?php include 'components/footer.php'; ?>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

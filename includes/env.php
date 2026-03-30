@@ -18,30 +18,15 @@ function load_env(string $path): void
             continue;
         }
 
-        if (str_starts_with($line, 'export ')) {
-            $line = trim(substr($line, 7));
-        }
-
         [$key, $value] = array_pad(explode('=', $line, 2), 2, '');
         $key = trim($key);
         $value = trim($value);
 
-        if ($key === '') {
+        if ($key == '') {
             continue;
         }
 
-        $alreadySet = array_key_exists($key, $_ENV)
-            || array_key_exists($key, $_SERVER)
-            || getenv($key) !== false;
-
-        if ($alreadySet) {
-            continue;
-        }
-
-        if (
-            (str_starts_with($value, '"') && str_ends_with($value, '"')) ||
-            (str_starts_with($value, "'") && str_ends_with($value, "'"))
-        ) {
+        if ((str_starts_with($value, '"') && str_ends_with($value, '"')) || (str_starts_with($value, "'") && str_ends_with($value, "'"))) {
             $value = substr($value, 1, -1);
         }
 
@@ -59,6 +44,5 @@ function env(string $key, ?string $default = null): ?string
     if ($value === false || $value === null || $value === '') {
         return $default;
     }
-
-    return is_string($value) ? trim($value) : trim((string) $value);
+    return (string) $value;
 }

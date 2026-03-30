@@ -1,4 +1,3 @@
-<?php require_once __DIR__ . '/../../includes/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +49,7 @@
       <!-- Sidebar -->
       <nav class="col-md-3 col-lg-2 sidebar text-center">
         <div class="p-3 bottom-menu">
-            <img src="<?= e(base_url('resources/RUR_logo_white.png')) ?>" 
+            <img src="../../resources/RUR_logo_white.png" 
                 alt="Logo" 
                 class="img-fluid mb-3" 
                 style="max-width:120px;">
@@ -114,16 +113,16 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 mb-3">
-              <img src="<?= e(base_url('resources/ucf.png')) ?>" alt="Image 1" class="grid-img">
+              <img src="/resources/ucf.png" alt="Image 1" class="grid-img">
             </div>
             <div class="col-md-6 mb-3">
-              <img src="<?= e(base_url('resources/fsi.png')) ?>" alt="Image 2" class="grid-img">
+              <img src="/resources/fsi.png" alt="Image 2" class="grid-img">
             </div>
             <div class="col-md-6 mb-3">
-              <img src="<?= e(base_url('resources/RUR_logo_white.png')) ?>" alt="Image 3" class="grid-img">
+              <img src="/resources/RUR_logo_white.png" alt="Image 3" class="grid-img">
             </div>
             <div class="col-md-6 mb-3">
-              <img src="<?= e(base_url('resources/unipoli.png')) ?>" alt="Image 4" class="grid-img">
+              <img src="/resources/unipoli.png" alt="Image 4" class="grid-img">
             </div>
           </div>
         </div>

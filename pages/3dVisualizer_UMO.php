@@ -1,13 +1,12 @@
-<?php require_once __DIR__ . '/../includes/bootstrap.php'; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Unit of Robotics</title>
-    <link rel="icon" type="image/png" href="<?= e(base_url('resources/RUR_logo_white.png')) ?>">
+    <link rel="icon" type="image/png" href="../resources/RUR_logo_white.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= e(base_url('styles/bootstrap.min.css')) ?>" rel="stylesheet">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
 
     <style>
         * {
@@ -45,7 +44,7 @@
     <h4>Introducing UMO AI</h4>
     <?php 
     
-    $glbPath = base_url('resources/assets/BMO.glb');
+    $glbPath = '../resources/assets/BMO.glb';
 
     include 'components/3dVisualizer.php'; 
     

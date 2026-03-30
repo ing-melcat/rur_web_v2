@@ -9,7 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="<?= e(base_url('styles/bootstrap.min.css')) ?>" rel="stylesheet">
-  <link href="<?= e(base_url('styles/style.css')) ?>" rel="stylesheet">
   <style>
     .fixed-img { width: 60%; aspect-ratio: 16 / 9; object-fit: cover; }
     #myCarousel{ width: 80%; height: 40%; margin: auto; overflow: hidden; }
@@ -25,7 +24,7 @@
     #myCarousel .carousel-caption button:hover{ background-color: #0a0a0a; }
   </style>
 </head>
-<body>
+<body class="p-5">
   <?php include __DIR__ . '/pages/components/nav-bar.php'; ?>
 
   <h1 class="text-dark text-center m-4 fw-bold" style="font-family: 'Roboto'">Research Unit of Robotics</h1>

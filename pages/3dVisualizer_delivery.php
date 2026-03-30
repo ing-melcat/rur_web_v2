@@ -1,12 +1,11 @@
-<?php require_once __DIR__ . '/../includes/bootstrap.php'; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Unit of Robotics</title>
-    <link rel="icon" type="image/png" href="<?= e(base_url('resources/RUR_logo_white.png')) ?>">
+    <link rel="icon" type="image/png" href="../resources/RUR_logo_white.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= e(base_url('styles/bootstrap.min.css')) ?>" rel="stylesheet">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
 
     <style>
         * {
@@ -53,7 +52,7 @@
     <h4>Introducing Delivery BOT v1</h4>
     <?php 
     
-    $glbPath = base_url('resources/assets/DeliveryBotv1.glb');
+    $glbPath = '../resources/assets/DeliveryBotv1.glb';
 
     include 'components/3dVisualizer.php'; 
     
@@ -82,7 +81,7 @@
     <div style="font-family: 'Roboto'; background-color: #e4e0e011;" class="text-center div-download">
         <h1>Download our mobile App!</h1>
         <p class="text-secondary">If you want to test our robot and control it, download our apk and use it</p>
-        <a href="<?= e(base_url('resources/RUR_logo_white.png')) ?>" class="btn btn-primary mb-5" download>Download DELIVER-E App for Android</a>
+        <a href="/resources/RUR_logo_white.png" class="btn btn-primary mb-5" download>Download DELIVER-E App for Android</a>
         <hr>
     </div>
 
@@ -103,7 +102,7 @@
         </div>
         <div class="toast-body">
         Download our mobile app and start using our robot! 
-        <a href="<?= e(base_url('resources/RUR_logo_white.png')) ?>" download>click here!</a>
+        <a href="/resources/RUR_logo_white.png" download>click here!</a>
         </div>
     </div>
     </div>

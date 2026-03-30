@@ -100,25 +100,10 @@ function app_origin(): string
     return $scheme . '://' . $host;
 }
 
-function app_url(): string
-{
-    $configured = rtrim((string) env('APP_URL', ''), '/');
-    if ($configured !== '') {
-        return $configured;
-    }
-
-    $railwayDomain = trim((string) env('RAILWAY_PUBLIC_DOMAIN', ''));
-    if ($railwayDomain !== '') {
-        return 'https://' . $railwayDomain;
-    }
-
-    return '';
-}
-
 function base_url(string $path = ''): string
 {
     $path = ltrim($path, '/');
-    $appUrl = app_url();
+    $appUrl = rtrim((string) env('APP_URL', ''), '/');
     if ($appUrl !== '') {
         return $appUrl . ($path !== '' ? '/' . $path : '');
     }
@@ -133,7 +118,7 @@ function base_url(string $path = ''): string
 function absolute_url(string $path = ''): string
 {
     $path = ltrim($path, '/');
-    $appUrl = app_url();
+    $appUrl = rtrim((string) env('APP_URL', ''), '/');
     if ($appUrl !== '') {
         return $appUrl . ($path !== '' ? '/' . $path : '');
     }
